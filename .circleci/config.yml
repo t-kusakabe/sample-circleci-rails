@@ -35,10 +35,6 @@ jobs: # a collection of steps
             - vendor/bundle
 
       - run:
-          name: Database setup
-          command: bin/rails db:schema:load --trace
-
-      - run:
           name: Run rspec in parallel
           command: |
             bundle exec rspec --profile 10 \
